@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01.1_exercicio01/01.1_exercicio01.iml" filepath="$PROJECT_DIR$/01.1_exercicio01/01.1_exercicio01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_primeiroMetodo/01_primeiroMetodo.iml" filepath="$PROJECT_DIR$/01_primeiroMetodo/01_primeiroMetodo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_recebendoParametros/02_recebendoParametros.iml" filepath="$PROJECT_DIR$/02_recebendoParametros/02_recebendoParametros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_escolhendoBonsNomes/05_escolhendoBonsNomes.iml" filepath="$PROJECT_DIR$/05_escolhendoBonsNomes/05_escolhendoBonsNomes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Capitulo_8.iml" filepath="$PROJECT_DIR$/.idea/Capitulo_8.iml" />
+    </modules>
+  </component>
+</project>
