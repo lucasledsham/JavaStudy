@@ -6,4 +6,8 @@ public class Carro {
   String cor;
   int anoFabricacao;
   Pessoa proprietario; // Composicao "tem um". Carro tem um proprietario
+
+  void calcularValorRevenda() {
+    System.out.printf("Calcular valor de revenda de: %s %d\n", modelo, anoFabricacao);
+  }
 }
