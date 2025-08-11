@@ -7,7 +7,6 @@ public class Principal {
 
     carro.proprietario = new Pessoa();
     carro.proprietario.nome = "Lucas";
-    System.out.printf("Carro de: %s\n", carro.proprietario.nome);
-    carro.calcularValorRevenda();
+    System.out.printf("Valo de Revenda do carro de %s: %.2f", carro.proprietario.nome, carro.calcularValorRevenda());
   }
 }

@@ -10,7 +10,7 @@ public class Carro {
   double precoCompra;
   Pessoa proprietario; // Composicao "tem um". Carro tem um proprietario
 
-  void calcularValorRevenda() {
+  double calcularValorRevenda() {
     int anoAtual = LocalDate.now().getYear();
     int tempoDeUsoEmAnos = anoAtual - anoFabricacao;
 
@@ -20,6 +20,7 @@ public class Carro {
     if (valorRevenda < 0) {
       valorRevenda = 0;
     }
-    System.out.printf("Tempo de uso (anos): %s\nValor de Revenda: %.2f\n", tempoDeUsoEmAnos, valorRevenda);
+    
+    return valorRevenda;
   }
 }
