@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Carro {
 
   int id;
@@ -5,9 +7,19 @@ public class Carro {
   String modelo;
   String cor;
   int anoFabricacao;
+  double precoCompra;
   Pessoa proprietario; // Composicao "tem um". Carro tem um proprietario
 
   void calcularValorRevenda() {
-    System.out.printf("Calcular valor de revenda de: %s %d\n", modelo, anoFabricacao);
+    int anoAtual = LocalDate.now().getYear();
+    int tempoDeUsoEmAnos = anoAtual - anoFabricacao;
+
+
+    int vidaUtilEmAnos = 20;
+    double valorRevenda = (precoCompra / vidaUtilEmAnos) * (vidaUtilEmAnos - tempoDeUsoEmAnos);
+    if (valorRevenda < 0) {
+      valorRevenda = 0;
+    }
+    System.out.printf("Tempo de uso (anos): %s\nValor de Revenda: %.2f\n", tempoDeUsoEmAnos, valorRevenda);
   }
 }
