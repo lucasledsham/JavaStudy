@@ -34,6 +34,15 @@ public class Carro {
   }
 
   double calcularIPVA() {
-    return calcularValorRevenda() * 0.04;
+    double ipva;
+    int tempoDeUsoEmAnos = calcularTempoDeUsoEmAnos();
+    
+    if (tempoDeUsoEmAnos >= 10) {
+      ipva = 0;
+    } else {
+      ipva = calcularValorRevenda() * 0.04;
+    }
+
+    return ipva;
   }
 }
