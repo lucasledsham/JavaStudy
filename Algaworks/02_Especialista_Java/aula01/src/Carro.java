@@ -10,10 +10,14 @@ public class Carro {
   double precoCompra;
   Pessoa proprietario; // Composicao "tem um". Carro tem um proprietario
 
-  double calcularValorRevenda() {
+  int calcularTempoDeUsoEmAnos() {
     int anoAtual = LocalDate.now().getYear();
     int tempoDeUsoEmAnos = anoAtual - anoFabricacao;
+    return tempoDeUsoEmAnos; 
+  }
 
+  double calcularValorRevenda() {
+    int tempoDeUsoEmAnos = calcularTempoDeUsoEmAnos();
 
     int vidaUtilEmAnos = 20;
     double valorRevenda = (precoCompra / vidaUtilEmAnos) * (vidaUtilEmAnos - tempoDeUsoEmAnos);
@@ -22,5 +26,14 @@ public class Carro {
     }
     
     return valorRevenda;
+  }
+
+  void imprimirResumoDepreciacao() {
+    System.out.printf("Tempo de uso (anos): %d\n", calcularTempoDeUsoEmAnos());
+    System.out.printf("Valo de Revenda do carro de %s: R$%.2f", proprietario.nome, calcularValorRevenda());
+  }
+
+  double calcularIPVA() {
+    return calcularValorRevenda() * 0.04;
   }
 }
