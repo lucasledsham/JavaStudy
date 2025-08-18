@@ -6,7 +6,7 @@ public class AppAula {
 
     IndiceMassaCorporalAula imc = paciente.calcularIndiceMassaCorporal();
 
-    if (imc.resultado >= 30) {
+    if (imc.estahComObesidade()) {
       System.out.println("Paciente esta com obesidade");
     } 
 
