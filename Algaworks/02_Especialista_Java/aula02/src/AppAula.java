@@ -1,10 +1,10 @@
 public class AppAula {
   public static void main(String[] args) {
-    PacienteAula paciente = new PacienteAula();
-    paciente.altura = 1.82;
-    paciente.peso = 75;
+    CalculadoraIMCAula calculadoraIMC = new CalculadoraIMCAula();
+    calculadoraIMC.altura = 1.82;
+    calculadoraIMC.peso = 75;
 
-    IndiceMassaCorporalAula imc = paciente.calcularIndiceMassaCorporal();
+    IndiceMassaCorporalAula imc = calculadoraIMC.calcular();
 
     if (imc.estahComObesidade()) {
       System.out.println("Paciente esta com obesidade");
