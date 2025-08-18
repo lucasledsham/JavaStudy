@@ -1,8 +1,6 @@
 public class CalculadoraIMCAula {
-  double peso;
-  double altura;
 
-  IndiceMassaCorporalAula calcular() {
+  IndiceMassaCorporalAula calcular(double peso, double altura) {
     IndiceMassaCorporalAula imc = new   IndiceMassaCorporalAula();
     imc.resultado = peso / (altura * altura);
     imc.peso = peso;
