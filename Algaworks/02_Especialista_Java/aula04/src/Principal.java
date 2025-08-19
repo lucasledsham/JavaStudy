@@ -12,6 +12,9 @@ public class Principal {
     // Chamando a Classe e nao um objeto
     Produto.custoEmbalagem = 7.75;
 
+    produto1.alterarCustoEmbalagem(12);
+    produto2.alterarCustoEmbalagem(8.99);
+
     produto1.imprimirCustoEmbalagem();
     produto2.imprimirCustoEmbalagem();
     
