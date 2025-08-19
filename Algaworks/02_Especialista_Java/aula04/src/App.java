@@ -1,11 +1,14 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        double precoCompraFornecedor = 140.50;
+        Produto novoProduto = new Produto();
+
+        novoProduto.alterarPrecoCusto(80);
 
         ServicoDePrecificacao servicoDePrecificacao = new ServicoDePrecificacao();
 
-        double precoVenda = servicoDePrecificacao.calcularPrecoVenda(precoCompraFornecedor);
+        servicoDePrecificacao.definirPrecoVenda(novoProduto, 20);
 
-        System.out.printf("Preco: R$%.2f\n", precoVenda);
+        System.out.printf("Preco de custo: R$%.2f\n", novoProduto.precoCusto);
+        System.out.printf("Preco de venda: R$%.2f\n", novoProduto.precoVenda);
     }
 }
